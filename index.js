@@ -1,10 +1,7 @@
 // Write your solution here!
 
 let drivers = ["Milo", "Otis", "Garfield"]
-let newDrivers = [...drivers, "Broom"]
-let moreNewDrivers = ["Arnold", ...drivers]
-let lastGone = drivers.slice(0, drivers.length - 1)
-let firstGone = drivers.slice(1)
+
 
 function destructivelyAppendDriver(name) {
     drivers.push('Ralph')
@@ -23,19 +20,17 @@ function destructivelyRemoveFirstDriver() {
 }
 
 function appendDriver(name) {
-    return newDrivers;
+    return [...drivers, name]
 }
 
 function prependDriver(name) {
-    return moreNewDrivers
+    return [name, ...drivers]
 }
 
 function removeLastDriver() {
-    drivers.slice(0, drivers.length - 1)
-    return lastGone
+    return drivers.slice(0, drivers.length - 1)
 }
 
 function removeFirstDriver() {
-    drivers.slice(1)
-    return firstGone
+    return drivers.slice(1)
 }
